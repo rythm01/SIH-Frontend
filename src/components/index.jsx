@@ -8,9 +8,9 @@ const index = () => {
                 <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-5xl font-semibold text-gray-800 overflow-clip">Become a Verified Broker with Our Platform</h1>
                 <span className="text-base text-gray-800">One  Of the Best Property selling and Buying Marketplace</span>
                 <div className="flex gap-2 justify-center">
-                    <Link to="/">
+                    <Link to="/admin">
                         <button className="my-2 flex text-white bg-primary border-0 py-2 px-6 focus:outline-none rounded-full hover:bg-primaryhover duration-300 hover:translate-y-2">
-                            Sign up as a Broker
+                            Add Assets
                         </button>
                     </Link>
                 </div>
