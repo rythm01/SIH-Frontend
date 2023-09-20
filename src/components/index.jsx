@@ -16,14 +16,14 @@ const index = () => {
                     </Link>
                     <Link to="/display">
                         <button className="my-2 flex text-white bg-primary border-0 py-2 px-6 focus:outline-none rounded-full hover:bg-primaryhover duration-300 hover:translate-y-2">
-                            ADD UPDATE
+                            DISPLAY DATA
                         </button>
                     </Link>
-                    <Link to="/admin">
+                    {/* <Link to="/admin">
                         <button className="my-2 flex text-white bg-primary border-0 py-2 px-6 focus:outline-none rounded-full hover:bg-primaryhover duration-300 hover:translate-y-2">
                             ADD DISPLAY
                         </button>
-                    </Link>
+                    </Link> */}
                 </div>
             </div>
         </div>

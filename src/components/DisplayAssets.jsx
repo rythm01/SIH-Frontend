@@ -25,18 +25,26 @@ function DisplayAssets() {
 
   return (
     <div>
-      <p>user data</p>
+      {/* <p>ALL DATA</p> */}
       <div className="container mx-auto">
         <h1 className="text-2xl font-bold mb-4">User Data</h1>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          <h1>hello</h1>
+         
           {userData.map((user) => {
             return (
               user.map((data) => {
                 console.log(data._id);
                 return (<div key={user._id}>
-                  <h1>hellooo</h1>
+                  <h1>BLOCK</h1>
                   <h2 className="text-lg font-semibold">{data._id}</h2>
+                  <div className="bg-white shadow-md rounded-lg overflow-hidden">
+                  <img
+                    className="w-full h-48 object-cover"
+                    src={data.image}
+                    alt={data.char}
+                  />
+                  </div>
+                  <h2 className="text-lg font-semibold">{data.char}</h2>
                 </div>)
               })
 
