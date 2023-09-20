@@ -11,10 +11,10 @@ import axios from "axios";
 
   // Function to handle form input changes
   const handleChange = (e) => {
-    const { name, value } = e.target;
+    // const { name, value } = e.target;
     setFormData({
       ...formData,
-      [name]: value,
+     "name":e.target.value,
     });
   };
 
@@ -27,14 +27,17 @@ import axios from "axios";
   // Function to handle form submission
   const handleSubmit = async (values) => {
     // Create a FormData object to send the file
-    const formData = new FormData();
-    formData.append("name", values.name);
-    formData.append("file", selectedFile);
+    const form = new FormData();
+    form.append("char", formData.name);
+    form.append("image", selectedFile);
+    console.log(typeof(values.name));
+    console.log(formData.name);
     console.log(selectedFile);
+     // Make a POST request to the API endpoint with the form data and file
 
-    // Make a POST request to the API endpoint with the form data and file
-    axios
-      .post("https://signbase.onrender.com/add-char", formData, {
+     try {
+      await axios
+      .post("https://signbase.onrender.com/add-char",form, {
         headers: {
           "Content-Type": "multipart/form-data", // Set content type for file upload
         },
@@ -45,8 +48,13 @@ import axios from "axios";
       })
       .catch((error) => {
         // Handle any errors here
-        console.error("Error adding data:", error);
+        console.error("Error adding data:", error.response.data);
       });
+      
+     } catch (error) {
+      console.error("Error adding data:", error);
+     }
+    
   };
 
   // Initial form values
