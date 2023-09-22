@@ -2,7 +2,7 @@ const Features = [
     {
         id: 1,
         img: "/images/Features/1.png",
-        title: "Showcase Your Property",
+        title: "Inscribe",
         desc: "Slate helps you see how many more days you need to work to reach your financial goal."
     },
     {
