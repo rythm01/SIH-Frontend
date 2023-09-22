@@ -1,4 +1,12 @@
 import React, { useState, useEffect } from 'react';
+import {
+  Card,
+  CardHeader,
+  CardBody,
+  CardFooter,
+  Typography,
+  Button,
+} from "@material-tailwind/react";
 import axios from 'axios';
 
 
@@ -34,61 +42,21 @@ function DisplayAssets() {
         <h1>BLOCK</h1>
       </h5>
 
-      <div className="card w-96 bg-base-100 shadow-xl">
-      {userData.map((user) => {
-                return (
-                  user.map((data) => {
-                    console.log(data._id);
-                    return (
-                    <div key={user._id}>
-                      <div class="block rounded-lg bg-blue-500 mt-8 mb-8 px-90 p-5 shadow-[0 2px 15px -3px rgba(0,0,0,0.07), 0 10px 20px -2px rgba(0,0,0,0.04)] dark:bg-red-500">
-                        <h2 className="text-lg font-semibold">{data._id}</h2>
-                        <div className="bg-white shadow-md rounded-lg overflow-hidden w-32 h-32 ">
-                        <img
-                          className="w-full h-full object-cover rounded border bg-white p-1"
-                          src={data.image}
-                          alt={data.char}
-                        />
-                        </div>
-                       
-                      </div>
-                    </div>)
-                  })
-                )
-              })}
-        <figure className="px-10 pt-10">
-        <img
-            className="w-full h-full object-cover rounded border bg-white p-1"
-            src={data.image}
-            alt={data.char}
-        /></figure>
-        <div className="card-body items-center text-center">
-          <h2 className="card-title">Shoes!</h2>
-          <p>If a dog chews shoes whose shoes does he choose?</p>
-          <div className="card-actions">
-            <button className="btn btn-primary">Buy Now</button>
-          </div>
-        </div>
-      </div>
       
-      {/* <p class="max-w-xs mb-4 text-base text-neutral-600 dark:text-neutral-200">
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-30"> 
+      <p class="mb-4 text-base text-neutral-600 dark:text-neutral-200"></p>
+      <div class="flex flex-wrap gap-16"> 
           {userData.map((user) => {
                 return (
                   user.map((data) => {
-                    console.log(data._id);
                     return (
                     <div key={user._id}>
-                      <div class="block rounded-lg bg-blue-500 mt-8 mb-8 px-90 p-5 shadow-[0 2px 15px -3px rgba(0,0,0,0.07), 0 10px 20px -2px rgba(0,0,0,0.04)] dark:bg-red-500">
-                        <h2 className="text-lg font-semibold">{data._id}</h2>
-                        <div className="bg-white shadow-md rounded-lg overflow-hidden w-32 h-32 ">
+                      <div class="w-full rounded-lg bg-blue-500 px-6 mt-8 mb-8 p-6 shadow-md">
+                      <h2 className="text-center text-lg font-semibold">{data.char}</h2>
                         <img
-                          className="w-full h-full object-cover rounded border bg-white p-1"
+                          className="w-full h-full object-cover rounded mb-5 border bg-white"
                           src={data.image}
                           alt={data.char}
                         />
-                        </div>
-                        <h2 className="text-lg font-semibold">{data.char}</h2>
                         <button
                           type="Update"
                           class="inline-block rounded bg-primary px-6 pb-2 py-5 pt-2.5 mr-2 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] dark:shadow-[0_4px_9px_-4px_rgba(59,113,202,0.5)] dark:hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)] dark:active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.2),0_4px_18px_0_rgba(59,113,202,0.1)]"
@@ -108,8 +76,7 @@ function DisplayAssets() {
                   })
                 )
               })}
-          </div>
-      </p> */}
+      </div>
   </div>
   );
 }
