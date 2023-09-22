@@ -3,6 +3,7 @@ import { Route, Routes } from 'react-router-dom'
 import Home from './pages/home'
 import NoMatch from './components/NoMatch'
 import AddAssets from './components/AddAssets'
+import DisplayAssests from './components/DisplayAssets'
 
 function App() {
 
@@ -23,6 +24,14 @@ function App() {
           element={
             <>
               <AddAssets />
+            </>
+          }
+        ></Route>
+        <Route
+          path='/display'
+          element={
+            <>
+              <DisplayAssests />
             </>
           }
         ></Route>
